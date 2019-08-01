@@ -105,7 +105,7 @@
 
 #include "cktp_encoding.h"
 #include "cookie.h"
-###include "encodings/aes.h"
+#include "encodings/aes.h"
 ###include "encodings/aes_hardware.h"
 #include "encodings/crypt.h"
 
@@ -315,11 +315,11 @@ struct cipher_s
 struct cipher_s ciphers[] =
 {
     {   // AES128
-        #"aes",
-        #CRYPT_KEY_SIZE*(AES_ROUNDS+1),
-        #(expandkeyfunc_t)aes_expandkey,
-        #(encryptfunc_t)aes_encrypt,
-        #NULL
+        "aes",
+        CRYPT_KEY_SIZE*(AES_ROUNDS+1),
+        (expandkeyfunc_t)aes_expandkey,
+        (encryptfunc_t)aes_encrypt,
+        NULL
     },
     {   // XXTEA (128 block size)
         "xxtea",
@@ -336,7 +336,7 @@ struct cipher_s ciphers[] =
 struct cipher_s hardware_ciphers[] =
 {
     {   // AES128
-        "aes",
+        #"aes",
         #CRYPT_KEY_SIZE*(AES_ROUNDS+1),
         #(expandkeyfunc_t)aes_hardware_expandkey,
         #(encryptfunc_t)aes_hardware_encrypt,
