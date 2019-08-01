@@ -26,7 +26,7 @@ CLIENT_OBJS = \
     cktp_url.o \
     config.o \
     encodings/aes.o \
-    encodings/aes_hardware.o \
+    #encodings/aes_hardware.o \#
     encodings/crypt.o \
     encodings/pad.o \
     encodings/natural.o \
