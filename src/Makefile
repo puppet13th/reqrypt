@@ -26,7 +26,6 @@ CLIENT_OBJS = \
     cktp_url.o \
     config.o \
     encodings/aes.o \
-    #encodings/aes_hardware.o \#
     encodings/crypt.o \
     encodings/pad.o \
     encodings/natural.o \
@@ -43,6 +42,7 @@ CLIENT_OBJS = \
     tunnel.o \
     $(PLATFORM)/capture.o \
     $(PLATFORM)/misc.o
+    #encodings/aes_hardware.o \#
 
 SERVER_OBJS = \
     base64.o \
