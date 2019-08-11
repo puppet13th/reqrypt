@@ -97,10 +97,10 @@ client_debug: $(CLIENT_OBJS) http_data.c
 
 $(CLIENT_PROG): client
 
-http_data.c: ui/* tools/file2c
-	(cd ui/; ../tools/file2c * > ../http_data.c)
-install_data.c: install/* tools/file2c
-	(cd install/; ../tools/file2c * > ../install_data.c)
+http_data.c: http_data.c.static
+	(cp http_data.c.static http_data.c)
+install_data.c: install_data.c.static
+	(cp install_data.c.static install_data.c)
 
 http_server.o: http_data.c
 install.o: install_data.c
