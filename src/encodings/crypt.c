@@ -106,7 +106,7 @@
 #include "cktp_encoding.h"
 #include "cookie.h"
 #include "encodings/aes.h"
-#include "encodings/aes_hardware.h"
+/*#include "encodings/aes_hardware.h" */
 #include "encodings/crypt.h"
 
 #ifdef CLIENT
